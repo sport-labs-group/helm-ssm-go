@@ -11,13 +11,14 @@ helm plugin install https://github.com/sport-labs-group/helm-ssm-go
 ```
 To install specific version of plugin or architecture, run the following commands
 ```sh
-export VERSION='0.6.0'
-export ARCH='arm64
+export VERSION='0.7.0'
+export ARCH='arm64'
+export OS='linux'
 helm plugin install https://github.com/sport-labs-group/helm-ssm-go
 ```
 ## Usage
 ```sh
-helm ssm -f values.yaml
+helm ssm-go -f values.yaml
 ```
 Command reads data from values.yaml file print to stdout content with replaced ssm params
 

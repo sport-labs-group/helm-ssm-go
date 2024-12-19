@@ -9,13 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        goos: [linux]
+        goos: [linux, darwin]
         goarch: [amd64, arm64]
         include:
           - goos: linux
             goarch: amd64
             ext: ""
           - goos: linux
+            goarch: arm64
+            ext: ""
+          - goos: darwin
+            goarch: amd64
+            ext: ""
+          - goos: darwin
             goarch: arm64
             ext: ""
 
